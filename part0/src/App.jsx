@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./Header";
 import Content from "./Content";
+import Total from "./Total";
 
 const App = () => {
   const course = {
@@ -24,9 +25,13 @@ const App = () => {
     <div>
       <Header title={course.name} />
       <Content parts={course.parts} />
-      {/* <Total
-        total={parts[0].exercises + part[1].exercises + part[2].exercises}
-  />*/}
+      <Total
+        total={
+          course.parts[0].exercises +
+          course.parts[1].exercises +
+          course.parts[2].exercises
+        }
+      />
     </div>
   );
 };
